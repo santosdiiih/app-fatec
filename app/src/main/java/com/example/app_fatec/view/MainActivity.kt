@@ -6,19 +6,16 @@ import android.os.Bundle
 import android.view.View
 import com.example.app_fatec.R
 import com.example.app_fatec.databinding.ActivityMainBinding
-import com.example.app_fatec.databinding.ToolbarBinding
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityMainBinding;
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_scren_chamados)
 
         var email = binding.editTextLogin.text
         var senha = binding.editTextPassword.text
@@ -34,12 +31,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(view: View) {
         binding.buttonLogin.setOnClickListener{
-            val openHome = Intent(this, MainActivity::class.java)
+            val openHome = Intent(this, ScrenChamadosActivity::class.java)
             startActivity(openHome)
         }
     }
-
-
-
-
 }

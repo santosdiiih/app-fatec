@@ -1,7 +1,8 @@
-package com.example.app_fatec
+package com.example.app_fatec.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.app_fatec.R
 
 class ScrenChamadosActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

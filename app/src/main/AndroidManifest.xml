@@ -14,7 +14,7 @@
         android:theme="@style/Theme.Appfatec"
         tools:targetApi="31">
         <activity
-            android:name=".ScrenChamadosActivity"
+            android:name=".view.ScrenChamadosActivity"
             android:exported="false" />
         <activity
             android:name=".toolBar"

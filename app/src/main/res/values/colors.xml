@@ -11,4 +11,6 @@
     <!-- SUGGESTION COLORS-->
     <color name="dark_blue">#12005e</color>
     <color name="ligth_blue">#534bae</color>
+    <color name="blue_ligth">#64b5f6</color>
+    <color name="blue_ligth_one">#bbdefb</color>
 </resources>
