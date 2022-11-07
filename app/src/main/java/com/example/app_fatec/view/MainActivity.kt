@@ -1,38 +1,34 @@
 package com.example.app_fatec.view
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.example.app_fatec.R
-import com.example.app_fatec.databinding.ActivityMainBinding
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.toolbar.*
+
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
-    private lateinit var binding: ActivityMainBinding;
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_scren_chamados)
-
-        var email = binding.editTextLogin.text
-        var senha = binding.editTextPassword.text
+        setContentView(R.layout.activity_main)
 
         insertToolbar()
+        buttonLogin.setOnClickListener(this)
     }
 
     private fun insertToolbar() {
-        //setSupportActionBar(binding.toolbar)
-        supportActionBar!!.title = getString(R.string.login) // adiciona o titulo
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true) // exibe a seta de voltar
+        setSupportActionBar(toolbar)
+        supportActionBar!!.title = getString(R.string.login)
     }
 
     override fun onClick(view: View) {
-        binding.buttonLogin.setOnClickListener{
+        if(view.id == R.id.buttonLogin){
             val openHome = Intent(this, ScrenChamadosActivity::class.java)
             startActivity(openHome)
+
         }
     }
 }
