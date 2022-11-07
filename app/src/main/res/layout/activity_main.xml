@@ -56,9 +56,10 @@
             <EditText
                 android:id="@+id/editTextLogin"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textSize="20sp"
-                android:layout_margin="15dp"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="15dp"
                 android:inputType="textEmailAddress"
                 android:textColor="@color/white"
                 />
@@ -72,6 +73,8 @@
             android:layout_marginStart="50dp"
             android:hint="@string/password"
             android:layout_marginEnd="50dp"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"            app:passwordToggleEnabled="true"
             android:textColorHint="@color/white"
             android:layout_marginTop="15dp"
             android:background="@drawable/left_circle">
@@ -79,9 +82,10 @@
             <EditText
                 android:id="@+id/editTextPassword"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textSize="20sp"
-                android:layout_margin="15dp"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
                 android:inputType="textPassword"
                 android:textColor="@color/white"
                 android:textColorHighlight="@color/black"
