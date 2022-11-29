@@ -32,10 +32,13 @@
             android:id="@+id/buttonAbrirGaleria"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
-            android:layout_margin="20dp"
-            android:src="@drawable/ic_baseline_photo_camera_24"/>
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/ic_baseline_photo_camera_24" />
     </RelativeLayout>
 
     <LinearLayout
@@ -47,7 +50,6 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -58,7 +60,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:textColorHint="@color/white"
+                    android:textColorHint="@color/black"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
                     android:paddingTop="5dp"
@@ -69,36 +71,13 @@
                         android:id="@+id/cadastroNome"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="20sp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="15dp"
                         android:layout_marginBottom="5dp"
-                        android:layout_marginRight="15dp"
-                        android:layout_marginLeft="15dp"
                         android:hint="@string/first_name"
-                        />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/inputTextCadastroNomeUltimo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:background="@drawable/left_circle"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:paddingTop="5dp"
-                    android:textColorHint="@color/white"
-                    android:layout_marginBottom="15dp">
-
-                    <EditText
-                        android:id="@+id/cadastroUltimoNome"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
                         android:textSize="20sp"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginRight="15dp"
-                        android:layout_marginLeft="15dp"
-                        android:hint="@string/last_name"
-                        />
+                        android:inputType="textCapWords"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -106,7 +85,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:textColorHint="@color/white"
+                    android:textColorHint="@color/black"
                     android:background="@drawable/left_circle"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
@@ -119,10 +98,11 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
                         android:textSize="20sp"
-                        android:hint="Digite seu email"
+                        android:textColor="@color/black"
+                        android:hint="@string/txtEmail"
                         android:inputType="textEmailAddress"
-                        android:layout_marginRight="15dp"
-                        android:layout_marginLeft="15dp"/>
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="20dp"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -130,10 +110,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:textColorHint="@color/white"
+                    android:textColorHint="@color/black"
                     android:background="@drawable/left_circle"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/white"
                     android:layout_marginBottom="15dp"
                     android:paddingTop="5dp">
 
@@ -142,10 +126,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="20sp"
-                        android:hint="A senha deve ter acima de 6"
+                        android:textColor="@color/black"
+                        android:hint="@string/text_senha"
                         android:inputType="textPassword"
-                        android:layout_marginRight="15dp"
-                        android:layout_marginLeft="15dp"/>
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="20dp"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -153,7 +138,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:textColorHint="@color/white"
+                    android:textColorHint="@color/black"
                     android:background="@drawable/left_circle"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
@@ -165,13 +150,64 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
+                        android:textColor="@color/black"
                         android:textSize="20sp"
                         android:hint="@string/nascimento"
-                        android:layout_marginRight="15dp"
-                        android:inputType="date|text"
-                        android:layout_marginLeft="15dp"/>
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="20dp"
+                        android:inputType="date|text" />
                 </com.google.android.material.textfield.TextInputLayout>
 
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputTextCadastroContato"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textColorHint="@color/black"
+                    android:background="@drawable/left_circle"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:paddingTop="5dp"
+                    android:layout_marginBottom="15dp">
+
+                    <EditText
+                        android:id="@+id/cadastroContato"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:hint="@string/contato"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="20dp"
+                        android:inputType="date|text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputTextCadastroGestor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textColorHint="@color/black"
+                    android:background="@drawable/left_circle"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:paddingTop="5dp"
+                    android:layout_marginBottom="15dp">
+
+                    <EditText
+                        android:id="@+id/cadastroGestor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:hint="@string/gestor"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginStart="20dp"
+                        android:inputType="date|text" />
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
@@ -182,16 +218,21 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
                     android:paddingTop="5dp"
-                    android:layout_marginBottom="15dp">
+                    android:layout_marginBottom="15dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/black" >
 
                     <Spinner
-                        android:id="@+id/cadastroSpinnerEstado"
+                        android:id="@+id/cadastroSpinnerFuncao"
                         android:layout_width="match_parent"
                         android:layout_height="70dp"
                         android:padding="20dp"
+                        android:textColor="@color/black"
                         android:layout_marginRight="15dp"
                         android:layout_marginLeft="15dp"
-                        style="@style/Widget.AppCompat.Spinner.Underlined"/>
+                        style="@style/Widget.AppCompat.Spinner.Underlined"
+                        android:entries="@array/funcao"
+                        />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <Button
@@ -201,16 +242,12 @@
                     android:layout_marginTop="30dp"
                     android:layout_marginBottom="20dp"
                     android:text="@string/resgistro"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:layout_gravity="center"
                     android:textSize="20sp"
                     android:background="@drawable/left_circle"
                     />
             </LinearLayout>
-
-
         </ScrollView>
-
     </LinearLayout>
-
 </LinearLayout>

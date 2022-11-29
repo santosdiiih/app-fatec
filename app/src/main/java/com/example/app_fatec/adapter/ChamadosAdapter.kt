@@ -29,7 +29,7 @@ class ChamadosAdapter(var listaChamados: ArrayList<Chamado>) : RecyclerView.Adap
         fun bind(chamado: Chamado){
             itemView.textTitleChamado.text = chamado.titulo
             itemView.textDescChamado.text = chamado.descricao
-            itemView.textPrioridade.text = chamado.idPrioridade
+            //itemView.textPrioridade.text = chamado.idPrioridade
         }
     }
 }

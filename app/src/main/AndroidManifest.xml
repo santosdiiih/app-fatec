@@ -18,6 +18,9 @@
             android:name=".view.ChamadoNewActivity"
             android:exported="false" />
         <activity
+            android:name=".view.NewUser"
+            android:exported="false" />
+        <activity
             android:name=".view.ScrenChamadosActivity"
             android:exported="false" />
         <activity

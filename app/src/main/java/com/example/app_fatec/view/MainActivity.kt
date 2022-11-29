@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         insertToolbar()
         buttonLogin.setOnClickListener(this)
+        buttonCadastro.setOnClickListener(this)
     }
 
     private fun insertToolbar() {
@@ -25,10 +26,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(view: View) {
+
         if(view.id == R.id.buttonLogin){
             val openHome = Intent(this, ScrenChamadosActivity::class.java)
             startActivity(openHome)
-
+        }
+        else if(view.id == R.id.buttonCadastro){
+            val openCad = Intent(this, NewUser::class.java)
+            startActivity(openCad)
         }
     }
 }
