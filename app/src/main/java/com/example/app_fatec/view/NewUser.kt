@@ -15,8 +15,8 @@ import kotlinx.android.synthetic.main.toolbar.*
 import java.lang.Error
 
 class NewUser : AppCompatActivity() {
-    private val SALVAR: String =  "Salvar";
-    private val CANCELAR: String =  "Cancelar";
+    private val SALVAR: String = "Salvar";
+    private val CANCELAR: String = "Cancelar";
     private val ERROR: String = "Error"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,17 +39,14 @@ class NewUser : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
             R.id.menuSalvar -> {
-                Toast.makeText(this, "Botão Salvar", Toast.LENGTH_SHORT).show()
                 if(validForm()){
                    saveUsuario()
                 }
             }
             R.id.menuCancelar -> {
-                Toast.makeText(this, "Botão Cancelar", Toast.LENGTH_SHORT).show()
                 alert(CANCELAR)
             }
             else -> {
-                Toast.makeText(this, "Botão Voltar", Toast.LENGTH_SHORT).show()
                 onBackPressed()
             }
         }
@@ -69,10 +66,7 @@ class NewUser : AppCompatActivity() {
         )
         val repository = UsuarioRepository(this)
         val id = repository.save(usuario)
-        if(id > 0){
-            alert(SALVAR)
-        }
-        else{
+        if(id != 0){
             alert(ERROR)
         }
     }
@@ -106,21 +100,33 @@ class NewUser : AppCompatActivity() {
             inputTextcadastroEmail.isErrorEnabled = false
             inputTextcadastroEmail.error = null
         }
-
         return valida
+    }
+
+    private fun limparFormulario(){
+        cadastroNome.setText("")
+        cadastroEmail.setText("")
+        cadastroSenha.setText("")
+
     }
 
     private fun alert(call: String){
         val builderDialog = AlertDialog.Builder(this)
          when (call) {
             SALVAR -> {
-                Toast.makeText(this, "Botão Salvar funcao alert ", Toast.LENGTH_SHORT).show()
+                builderDialog.setTitle("Usuario Cadastrado")
+                builderDialog.setMessage("Agora você já consegue fazer login na plataforma\n\n")
+                builderDialog.setIcon(R.drawable.ic_baseline_done_24)
+                builderDialog.setPositiveButton("OK"){ _, _ ->
+                    onBackPressed()
+                }
+                builderDialog.show()
+                limparFormulario()
             }
             CANCELAR -> {
                 builderDialog.setTitle(getString(R.string.dialog_title_newUser))
-                //builderDialog.setIcon(R.drawable.ic_baseline_clear_30) ficou mal formatado
                 builderDialog.setMessage(getString(R.string.dialog_newUser))
-
+                builderDialog.setIcon(R.drawable.ic_baseline_clear_30)
                 builderDialog.setPositiveButton(getString(R.string.dialog_button_yes)) { _, _ ->
                     onBackPressed()
                 }
@@ -130,7 +136,13 @@ class NewUser : AppCompatActivity() {
                 builderDialog.show()
             }
              ERROR -> {
-
+                 builderDialog.setTitle("Erro ao salvar os dados")
+                 builderDialog.setMessage("Sinto muito não foi possivel salvar seu cadastro\n\n Tente novamente mais tarde")
+                 builderDialog.setIcon(R.drawable.ic_baseline_clear_30)
+                 builderDialog.setPositiveButton("OK") { _, _ ->
+                     onBackPressed()
+                 }
+                 builderDialog.show()
              }
         }
     }

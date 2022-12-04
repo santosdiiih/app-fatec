@@ -13,18 +13,23 @@ import com.example.app_fatec.datasource.DatabaseDefinitions
  */
 class DataBaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
     override fun onCreate(db: SQLiteDatabase) {
-        db.execSQL(CREATE_TABLE_STATUS)
-        db.execSQL(CREATE_TABLE_SOLICITANTE)
-        db.execSQL(CREATE_TABLE_CHAMADO)
         db.execSQL(CREATE_TABLE_TECNICO)
+        db.execSQL(CREATE_TABLE_SOLICITANTE)
+        db.execSQL(CREATE_TABLE_STATUS)
+        db.execSQL(CREATE_TABLE_CHAMADO)
     }
 
-    override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
+    override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
 
     }
     companion object{
-        private const val DATABASE_NAME = "dbSuporte"
-        private const val DATABASE_VERSION = 1
+        private const val DATABASE_NAME = "app"
+        private const val DATABASE_VERSION = 7
+
+        private const val DROP_TABLE_CHAMADO = "DROP TABLE ${DatabaseDefinitions.Chamado.TABLE_NAME}"
+        private const val DROP_TABLE_USUARIO = "DROP TABLE ${DatabaseDefinitions.Solicitante.TABLE_NAME}"
+        private const val DROP_TABLE_TECNICO = "DROP TABLE ${DatabaseDefinitions.Tecnico.TABLE_NAME}"
+        private const val DROP_TABLE_STATUS = "DROP TABLE ${DatabaseDefinitions.Status.TABLE_NAME}"
 
         private const val CREATE_TABLE_STATUS = "CREATE TABLE ${DatabaseDefinitions.Status.TABLE_NAME}(" +
                 "${DatabaseDefinitions.Status.Columns.ID_STATUS} INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
@@ -52,14 +57,13 @@ class DataBaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
                 "${DatabaseDefinitions.Solicitante.Columns.CONTATO} VARCHAR(20) NOT NULL);"
 
         private const val CREATE_TABLE_CHAMADO =  "CREATE TABLE ${DatabaseDefinitions.Chamado.TABLE_NAME}(" +
-                "${DatabaseDefinitions.Chamado.Columns.ID_CHAMADO} INTEGER  PRIMARY KEY AUTOINCREMENT," +
+                "${DatabaseDefinitions.Chamado.Columns.ID_CHAMADO} INTEGER  PRIMARY KEY AUTOINCREMENT NOT NULL," +
                 "${DatabaseDefinitions.Chamado.Columns.TITULO} VARCHAR(50) NOT NULL, " +
-                "${DatabaseDefinitions.Chamado.Columns.DATA_ABERTURA} DATE NOT NULL, " +
-                "${DatabaseDefinitions.Chamado.Columns.DATA_ATUALIZACAO} DATE NOT NULL, " +
+                "${DatabaseDefinitions.Chamado.Columns.DATA_ABERTURA} VARCHAR(50) NOT NULL, " +
+                "${DatabaseDefinitions.Chamado.Columns.DATA_ATUALIZACAO} VARCHAR(50) NOT NULL, " +
                 "${DatabaseDefinitions.Chamado.Columns.DATA_FECHAMENTO} VARCHAR(50), " +
-                "${DatabaseDefinitions.Chamado.Columns.DESCRICAO} VARCHAR(150), " +
-                "${DatabaseDefinitions.Chamado.Columns.ID_STATUS} INTEGER NOT NULL, " +
-                "${DatabaseDefinitions.Chamado.Columns.ID_USUARIO}INTEGER NOT NULL);"
+                "${DatabaseDefinitions.Chamado.Columns.DESCRICAO} VARCHAR(150));"
+
     }
 
 }

@@ -25,7 +25,7 @@ class DatabaseDefinitions {
     }
 
     object Chamado {
-        const val TABLE_NAME = "tblCHamado"
+        const val TABLE_NAME = "tblChamado"
         object Columns {
             const val ID_CHAMADO = "idChamado"
             const val TITULO = "titulo"

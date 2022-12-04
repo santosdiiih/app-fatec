@@ -33,10 +33,11 @@
     <string name="textPrioridadeChamado">Prioridade:</string>
     <string name="cancelar">Cancelar</string>
     <string name="salvar">Salvar</string>
+    <string name="scren_new_chamado">Novo Chamado</string>
 
     <!-- DIALOG  -->
     <string name="dialog_title_newUser">Cancelar Cadastro</string>
-    <string name="dialog_newUser">Você tem certeza que deseja cancelar o cadastro ?</string>
+    <string name="dialog_newUser">Você tem certeza que deseja cancelar o cadastro ?\n\n</string>
     <string name="dialog_button_yes">SIM</string>
     <string name="dialog_button_not">NÃO</string>
     <string name="gestor">Gestor</string>
