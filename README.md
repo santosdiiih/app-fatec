@@ -3,8 +3,8 @@
 Sistemas. 
 
 # Introdução
-  O Chama TI é uma aplicação didatica que foi criada com intuito de adquirir conhecimento sobre o desenvolvimento e ser apresentado no SINGETEC para a 
-conclusão do TG1 e TG 2.
+  O Chama TI é uma aplicação didatica que foi criada com intuito de adquirir conhecimento sobre o desenvolvimento mobile e ser apresentado no SINGETEC para a 
+conclusão do TG1 e TG2.
 
 # Conceito 
   O chama TI é uma plataforma móvel em que os técnicos da área de TI possam utilizar para realizar a tratativa dos chamados, 
