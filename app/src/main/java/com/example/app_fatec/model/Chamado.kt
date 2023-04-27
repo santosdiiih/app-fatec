@@ -12,5 +12,5 @@ class Chamado (
     var descricao: String = "",
     var numeroChamado: String = "S982736",
     var imagemChamado: String = "",
-    var comentario: ArrayList<String>
+    //var comentario: ArrayList<String>
         )

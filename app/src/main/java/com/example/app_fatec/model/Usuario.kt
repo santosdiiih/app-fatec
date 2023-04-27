@@ -11,5 +11,5 @@ data class Usuario(
     var funcao: String = "",
     var gestor: String = "",
     var contato: String = "",
-    var status: Boolean
+    var status: Boolean = true
 )

@@ -7,7 +7,7 @@ class DatasourceUsers {
         fun getUsuario(): ArrayList<Usuario>{
             var usuario = ArrayList<Usuario>()
             
-            usuario.add(Usuario(1, "Ingrid", "27/06/2000", "passei", "123", "dev", "", ""))
+            //usuario.add(Usuario(1, "Ingrid", "27/06/2000", "passei", "123", "dev", "", ""))
             return  usuario
         }
     }

@@ -1,11 +1,13 @@
 package com.example.app_fatec.view
 
 import android.content.Intent
+import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.example.app_fatec.R
@@ -16,8 +18,9 @@ import kotlinx.android.synthetic.main.activity_chamado_new.*
 import kotlinx.android.synthetic.main.activity_new_user.*
 import kotlinx.android.synthetic.main.toolbar.*
 import java.util.*
+import kotlin.collections.ArrayList
 
-class ChamadoNewActivity : AppCompatActivity()  {
+class ChamadoNewActivity : AppCompatActivity(), View.OnClickListener {
     private val SALVAR: String = "Salvar";
     private val CANCELAR: String = "Cancelar";
     private val ERROR: String = "Error"
@@ -27,6 +30,7 @@ class ChamadoNewActivity : AppCompatActivity()  {
         setContentView(R.layout.activity_chamado_new)
 
         insertToolbar()
+        imageButton.setOnClickListener(this)
     }
 
     private fun insertToolbar() {
@@ -67,6 +71,17 @@ class ChamadoNewActivity : AppCompatActivity()  {
         return true
     }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (data != null){
+            val inputString = contentResolver.openInputStream( data.data!!)
+            val bitmap = BitmapFactory.decodeStream(inputString)
+            fotoChamado.scaleType = ImageView.ScaleType.CENTER_CROP
+            fotoChamado.setImageBitmap(bitmap)
+        }
+    }
+
     private fun validForm(): Boolean{
         var valida = true;
         if(textTituloChamado.length() < 3){
@@ -90,8 +105,20 @@ class ChamadoNewActivity : AppCompatActivity()  {
         return valida
     }
 
+    override fun onClick(view: View){
+        val id = view.id
+        when(id){
+           R.id.imageButton -> {
+               val intent = Intent(Intent.ACTION_GET_CONTENT)
+               intent.type = "image/*"
+               startActivityForResult(intent, 5000)
+           }
+       }
+    }
+
     private fun saveChamado(){
         val dateNow = Calendar.getInstance().time
+
         val chamado = Chamado(
             idChamado = 0,
             dataAtualizacao =  "27-06-200",
@@ -99,6 +126,8 @@ class ChamadoNewActivity : AppCompatActivity()  {
             dataFechamento = "27-06-200",
             descricao = txtMotivoChamado.text.toString(),
             dataAbertura = "27-06-200",
+            imagemChamado = "",
+            numeroChamado = ""
         )
         // idStatus,dataAtualizacao,idUsuario,titulo,dataFechamento,descricao,dataAbertura
         val repository = ChamadoRepository(this)

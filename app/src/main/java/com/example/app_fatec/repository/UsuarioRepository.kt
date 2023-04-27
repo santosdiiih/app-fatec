@@ -54,6 +54,7 @@ class UsuarioRepository(context: Context){
             usuario.senha = cursor.getString(cursor.getColumnIndex(DatabaseDefinitions.Solicitante.Columns.SENHA))
             usuario.dataNascimento = cursor.getString(cursor.getColumnIndex(DatabaseDefinitions.Solicitante.Columns.DATA_NASCIMENTO))
             usuario.funcao = cursor.getString(cursor.getColumnIndex(DatabaseDefinitions.Solicitante.Columns.FUNCAO))
+            usuario.status = true
         }
         return usuario
     }
