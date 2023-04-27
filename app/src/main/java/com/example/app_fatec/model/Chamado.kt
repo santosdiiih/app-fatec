@@ -11,5 +11,6 @@ class Chamado (
     var dataAtualizacao: String = "02-12-2022",
     var descricao: String = "",
     var numeroChamado: String = "S982736",
+    var imagemChamado: String = "",
     var comentario: ArrayList<String>
         )
