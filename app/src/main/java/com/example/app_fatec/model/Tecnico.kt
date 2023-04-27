@@ -11,5 +11,6 @@ class Tecnico (
     var funcao: String,
     var gestor: String,
     var contato: String,
-    var idChamado: String
+    var idChamado: String,
+    var status: Boolean
     )

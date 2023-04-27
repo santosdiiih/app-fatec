@@ -10,5 +10,6 @@ data class Usuario(
     var senha: String = "",
     var funcao: String = "",
     var gestor: String = "",
-    var contato: String = ""
+    var contato: String = "",
+    var status: Boolean
 )
