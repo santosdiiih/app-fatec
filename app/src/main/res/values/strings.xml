@@ -10,8 +10,8 @@
     <string name="login">Login</string>
     <string name="cadastro">Cadastre-se</string>
     <string name="title_card_chamado">Instalação</string>
-    <string name="text_desc_chamado">Preciso da instalção da VPN em meu notebook</string>
-    <string name="prioridade">media</string>
+    <string name="text_desc_chamado">Preciso da Instalção da VPN em meu Notebook</string>
+    <string name="prioridade">Média</string>
     <string name="textDetalhes">Detalhes</string>
     <string name="title_activity_new_chamados">NewChamadosActivity</string>
     <string name="text_name">Nome Completo</string>
@@ -21,28 +21,36 @@
     <string name="title_activity_new_chamado">NewChamadoActivity</string>
     <string name="textCadastro">CADASTRE-SE</string>
     <string name="first_name">Digite seu nome</string>
-    <string name="last_name">Digite seu ultimo nome</string>
+    <string name="last_name">Digite seu Último Nome</string>
     <string name="nascimento">Data Nascimento: ano / mes / dia</string>
     <string name="resgistro">Registrar - se</string>
-    <string name="text_senha">Digite sua senha</string>
-    <string name="txtEmail">Digite seu email</string>
+    <string name="text_senha">Digite sua Senha</string>
+    <string name="txtEmail">Digite seu E-mail</string>
     <string name="text_top_new_chamado">Descreva a sua \n Solicitação</string>
     <string name="text_title_chamado">Titulo da Solicitação</string>
-    <string name="text_motivo_chamado">Descreva a sua solicitação</string>
+    <string name="text_motivo_chamado">Descreva a sua Solicitação</string>
     <string name="text_categoria">CATETORIA:</string>
     <string name="textPrioridadeChamado">Prioridade:</string>
+    <string name="textNumeroChamado">RITM4344165</string>
     <string name="cancelar">Cancelar</string>
     <string name="salvar">Salvar</string>
     <string name="scren_new_chamado">Novo Chamado</string>
 
     <!-- DIALOG  -->
     <string name="dialog_title_newUser">Cancelar Cadastro</string>
-    <string name="dialog_newUser">Você tem certeza que deseja cancelar o cadastro ?\n\n</string>
+    <string name="dialog_newUser">Você tem Certeza que Deseja Cancelar o Cadastro ?\n\n</string>
     <string name="dialog_button_yes">SIM</string>
     <string name="dialog_button_not">NÃO</string>
     <string name="gestor">Gestor</string>
     <string name="funcao">Função</string>
     <string name="contato">Nº Celular</string>
+    <string name="statusChamado">Aberto</string>
+    <string name="status">Status:</string>
+    <string name="txt_atualizado_em">Atualizado em:</string>
+    <string name="text_date">02-12-2022</string>
+    <string name="text_aberto_em">Aberto em:</string>
+    <string name="txt_motivo_chamado">Impressora sem tinta para realizar impressões</string>
+    <string name="txt_categoria_chamado">Impressora</string>
 
     <!-- SPINNERS -->
     <string-array name="categorias">

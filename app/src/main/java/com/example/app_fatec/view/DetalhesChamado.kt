@@ -33,7 +33,7 @@ class DetalhesChamado : AppCompatActivity(), View.OnClickListener {
 
     private fun insertToolbar() {
         setSupportActionBar(toolbar)
-        supportActionBar!!.title = "Consular Chamado"
+        supportActionBar!!.title = "Detalhes Chamado"
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
     }
 
