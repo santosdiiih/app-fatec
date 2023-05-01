@@ -13,6 +13,7 @@
     <string name="text_desc_chamado">Preciso da Instalção da VPN em meu Notebook</string>
     <string name="prioridade">Média</string>
     <string name="textDetalhes">Detalhes</string>
+    <string name="textComentario">Comentarios</string>
     <string name="title_activity_new_chamados">NewChamadosActivity</string>
     <string name="text_name">Nome Completo</string>
     <string name="text_email">E-mail</string>
