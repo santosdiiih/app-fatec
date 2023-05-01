@@ -59,6 +59,7 @@ class DataBaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         private const val CREATE_TABLE_CHAMADO =  "CREATE TABLE ${DatabaseDefinitions.Chamado.TABLE_NAME}(" +
                 "${DatabaseDefinitions.Chamado.Columns.ID_CHAMADO} INTEGER  PRIMARY KEY AUTOINCREMENT NOT NULL," +
                 "${DatabaseDefinitions.Chamado.Columns.TITULO} VARCHAR(50) NOT NULL, " +
+                "${DatabaseDefinitions.Chamado.Columns.IMAGEM_CHAMADO} BLOB, " +
                 "${DatabaseDefinitions.Chamado.Columns.DATA_ABERTURA} VARCHAR(50) NOT NULL, " +
                 "${DatabaseDefinitions.Chamado.Columns.DATA_ATUALIZACAO} VARCHAR(50) NOT NULL, " +
                 "${DatabaseDefinitions.Chamado.Columns.DATA_FECHAMENTO} VARCHAR(50), " +

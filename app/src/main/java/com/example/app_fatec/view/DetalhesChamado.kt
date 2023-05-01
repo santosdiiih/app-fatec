@@ -28,6 +28,8 @@ class DetalhesChamado : AppCompatActivity(), View.OnClickListener {
         chamado = repository.getChamado(id)
         txtTitle.setText(chamado.titulo)
         txtMotivo.setText(chamado.descricao)
+        imageChamado.setImageBitmap(chamado.imagemChamado)
+
 
     }
 

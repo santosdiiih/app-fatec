@@ -1,6 +1,7 @@
 package com.example.app_fatec.view
 
 import android.content.Intent
+import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -24,6 +25,7 @@ class ChamadoNewActivity : AppCompatActivity(), View.OnClickListener {
     private val SALVAR: String = "Salvar";
     private val CANCELAR: String = "Cancelar";
     private val ERROR: String = "Error"
+    private var bitmap: Bitmap? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -76,9 +78,10 @@ class ChamadoNewActivity : AppCompatActivity(), View.OnClickListener {
 
         if (data != null){
             val inputString = contentResolver.openInputStream( data.data!!)
-            val bitmap = BitmapFactory.decodeStream(inputString)
+            bitmap = BitmapFactory.decodeStream(inputString)
             fotoChamado.scaleType = ImageView.ScaleType.CENTER_CROP
             fotoChamado.setImageBitmap(bitmap)
+
         }
     }
 
@@ -123,10 +126,10 @@ class ChamadoNewActivity : AppCompatActivity(), View.OnClickListener {
             idChamado = 0,
             dataAtualizacao =  "27-06-200",
             titulo = textTituloChamado.text.toString(),
-            dataFechamento = "27-06-200",
+            dataFechamento = "27-06-2000",
             descricao = txtMotivoChamado.text.toString(),
-            dataAbertura = "27-06-200",
-            imagemChamado = "",
+            dataAbertura = "27-06-2000",
+            imagemChamado = bitmap,
             numeroChamado = ""
         )
         // idStatus,dataAtualizacao,idUsuario,titulo,dataFechamento,descricao,dataAbertura

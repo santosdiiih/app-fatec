@@ -35,6 +35,7 @@ class DatabaseDefinitions {
             const val DESCRICAO = "descricao"
             const val ID_USUARIO = "idUsuario"
             const val ID_STATUS = "idStatus"
+            const val IMAGEM_CHAMADO = "imagemChamado"
         }
     }
 

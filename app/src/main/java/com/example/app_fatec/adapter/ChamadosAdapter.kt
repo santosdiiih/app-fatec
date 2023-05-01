@@ -31,8 +31,15 @@ class ChamadosAdapter(var listaChamados: ArrayList<Chamado>) : RecyclerView.Adap
         fun bind(chamado: Chamado){
             itemView.textTitleChamado.text = chamado.titulo
             itemView.textDescChamado.text = chamado.descricao
+            itemView.imageChamado.setImageBitmap(chamado.imagemChamado)
 
             itemView.textDetalhes.setOnClickListener{
+                val intent = Intent(itemView.context, DetalhesChamado::class.java)
+                intent.putExtra("id", chamado.idChamado)
+                itemView.context.startActivity(intent)
+            }
+
+            itemView.textComentario.setOnClickListener{
                 val intent = Intent(itemView.context, DetalhesChamado::class.java)
                 intent.putExtra("id", chamado.idChamado)
                 itemView.context.startActivity(intent)
