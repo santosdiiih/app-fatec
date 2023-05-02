@@ -12,6 +12,6 @@ class Chamado (
     var dataAtualizacao: String = "02-12-2022",
     var descricao: String = "",
     var numeroChamado: String = "S982736",
-    var imagemChamado: Bitmap? = null
-    //var comentario: ArrayList<String>
+    var imagemChamado: Bitmap? = null,
+    var comentario: ArrayList<String>? = null
         )

@@ -122,6 +122,9 @@ class ChamadoNewActivity : AppCompatActivity(), View.OnClickListener {
     private fun saveChamado(){
         val dateNow = Calendar.getInstance().time
 
+        val comentario: ArrayList<String>? = null
+         comentario?.add("tetes")
+
         val chamado = Chamado(
             idChamado = 0,
             dataAtualizacao =  "27-06-200",
@@ -130,7 +133,9 @@ class ChamadoNewActivity : AppCompatActivity(), View.OnClickListener {
             descricao = txtMotivoChamado.text.toString(),
             dataAbertura = "27-06-2000",
             imagemChamado = bitmap,
-            numeroChamado = ""
+            numeroChamado = "",
+            comentario = comentario
+
         )
         // idStatus,dataAtualizacao,idUsuario,titulo,dataFechamento,descricao,dataAbertura
         val repository = ChamadoRepository(this)
