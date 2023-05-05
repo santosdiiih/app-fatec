@@ -1,22 +1,31 @@
 package com.example.app_fatec.view
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.database.CursorWindow
 import android.os.Bundle
-import android.util.Log
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.app_fatec.R
 import com.example.app_fatec.adapter.ChamadosAdapter
-import com.example.app_fatec.datasource.DatasourceChamados
 import com.example.app_fatec.repository.ChamadoRepository
 import kotlinx.android.synthetic.main.activity_scren_chamados.*
 import kotlinx.android.synthetic.main.toolbar.*
-import javax.sql.DataSource
+import java.lang.reflect.Field
+
 
 class ScrenChamadosActivity : AppCompatActivity(), View.OnClickListener{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        try {
+            val field: Field = CursorWindow::class.java.getDeclaredField("sCursorWindowSize")
+            field.setAccessible(true)
+            field.set(null, 100 * 1024 * 1024) //the 100MB is the new size
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+
         setContentView(R.layout.activity_scren_chamados)
 
         insertToolbar()
