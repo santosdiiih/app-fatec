@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ComentariosActivity"
+    android:orientation="vertical"
+    android:background="@color/blue_ligth_one">
+
+    <include layout="@layout/toolbar"/>
+
+    <TextView
+        android:id="@+id/textNumeroChamado"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:text="@string/textNumeroChamado"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        />
+    <ImageView
+        android:id="@+id/imageChamado"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_baseline_computer_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNumeroChamado"
+
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reciclerViewChamado"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageChamado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/inputTextMotivoChamado"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputTextMotivoChamado"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:textColorHint="@color/black"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/box_text"
+        app:layout_constraintBottom_toTopOf="@+id/buttonEnviar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        >
+
+        <EditText
+            android:id="@+id/txtMotivoComentario"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textStyle="bold"
+            android:maxLength="200"
+            android:gravity="left"
+            android:hint="@string/text_motivo_comentario"
+            android:textSize="20sp"
+            android:paddingStart="10dp"
+            android:inputType="textMultiLine"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/buttonEnviar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/enviar"
+        android:textColor="@color/white"
+        android:background="@drawable/button_dark"
+        android:textSize="20sp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
