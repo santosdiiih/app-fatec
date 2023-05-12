@@ -20,7 +20,7 @@ class DataBaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
-
+        db.execSQL(CREATE_TABLE_COMENTARIO)
     }
     companion object{
         private const val DATABASE_NAME = "app"
@@ -64,6 +64,12 @@ class DataBaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
                 "${DatabaseDefinitions.Chamado.Columns.DATA_ATUALIZACAO} VARCHAR(50) NOT NULL, " +
                 "${DatabaseDefinitions.Chamado.Columns.DATA_FECHAMENTO} VARCHAR(50), " +
                 "${DatabaseDefinitions.Chamado.Columns.DESCRICAO} VARCHAR(150));"
+
+        private const val CREATE_TABLE_COMENTARIO =  "CREATE TABLE ${DatabaseDefinitions.ComentarioChamado.TABLE_NAME}(" +
+                "${DatabaseDefinitions.ComentarioChamado.Columns.ID_COMENTARIO} INTEGER  PRIMARY KEY AUTOINCREMENT NOT NULL," +
+                "${DatabaseDefinitions.ComentarioChamado.Columns.COMENTARIO} VARCHAR(100), " +
+                "${DatabaseDefinitions.ComentarioChamado.Columns.NOME_AUTOR} VARCHAR(50), " +
+                "${DatabaseDefinitions.ComentarioChamado.Columns.ID_CHAMADO} INTEGER);"
 
     }
 

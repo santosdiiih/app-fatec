@@ -17,6 +17,7 @@ import java.lang.reflect.Field
 class ScrenChamadosActivity : AppCompatActivity(), View.OnClickListener{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_scren_chamados)
 
         try {
             val field: Field = CursorWindow::class.java.getDeclaredField("sCursorWindowSize")
@@ -25,8 +26,6 @@ class ScrenChamadosActivity : AppCompatActivity(), View.OnClickListener{
         } catch (e: Exception) {
             e.printStackTrace()
         }
-
-        setContentView(R.layout.activity_scren_chamados)
 
         insertToolbar()
         buttonNewChamado.setOnClickListener(this)

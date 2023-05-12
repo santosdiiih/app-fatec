@@ -57,9 +57,10 @@ class DatabaseDefinitions {
     object ComentarioChamado{
         const val TABLE_NAME = "tblComentarioChamado"
         object Columns {
-            const val ID_CHAMADO = "idChamado"
+            const val ID_COMENTARIO = "idComentario"
             const val COMENTARIO = "comentario"
-            const val ID_AUTOR = "idAutor"
+            const val NOME_AUTOR = "nomeAutor"
+            const val ID_CHAMADO = "idChamado"
         }
     }
 }

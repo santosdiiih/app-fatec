@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.app_fatec.R
 import com.example.app_fatec.model.Chamado
+import com.example.app_fatec.view.ComentariosActivity
 import com.example.app_fatec.view.DetalhesChamado
 import kotlinx.android.synthetic.main.layout_card_chamado.view.*
 
@@ -40,7 +41,7 @@ class ChamadosAdapter(var listaChamados: ArrayList<Chamado>) : RecyclerView.Adap
             }
 
             itemView.textComentario.setOnClickListener{
-                val intent = Intent(itemView.context, DetalhesChamado::class.java)
+                val intent = Intent(itemView.context, ComentariosActivity::class.java)
                 intent.putExtra("id", chamado.idChamado)
                 itemView.context.startActivity(intent)
             }

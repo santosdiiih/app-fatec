@@ -29,8 +29,6 @@ class DetalhesChamado : AppCompatActivity(), View.OnClickListener {
         txtTitle.setText(chamado.titulo)
         txtMotivo.setText(chamado.descricao)
         imageChamado.setImageBitmap(chamado.imagemChamado)
-
-
     }
 
     private fun insertToolbar() {

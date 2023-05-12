@@ -30,6 +30,7 @@
     <string name="text_top_new_chamado">Descreva a sua \n Solicitação</string>
     <string name="text_title_chamado">Titulo da Solicitação</string>
     <string name="text_motivo_chamado">Descreva a sua Solicitação</string>
+    <string name="text_motivo_comentario">Descreva a sua Comentario</string>
     <string name="text_categoria">CATETORIA:</string>
     <string name="textPrioridadeChamado">Prioridade:</string>
     <string name="textNumeroChamado">RITM4344165</string>
@@ -52,6 +53,10 @@
     <string name="text_aberto_em">Aberto em:</string>
     <string name="txt_motivo_chamado">Impressora sem tinta para realizar impressões</string>
     <string name="txt_categoria_chamado">Impressora</string>
+
+    <string name="textNomeComentario">Ingrid Aparecida</string>
+    <string name="text_comentario">Realizada tentativa de contato porém sem sucesso</string>
+    <string name="enviar">Enviar</string>
 
     <!-- SPINNERS -->
     <string-array name="categorias">
