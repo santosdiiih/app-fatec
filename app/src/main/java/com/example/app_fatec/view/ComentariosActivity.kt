@@ -9,8 +9,9 @@ import com.example.app_fatec.R
 import com.example.app_fatec.model.Comentario
 import com.example.app_fatec.repository.ComentarioRepository
 import kotlinx.android.synthetic.main.activity_chamado_new.textTituloChamado
-import kotlinx.android.synthetic.main.activity_chamados.buttonEnviar
-import kotlinx.android.synthetic.main.activity_chamados.txtMotivoComentario
+import kotlinx.android.synthetic.main.activity_comentarios.buttonEnviar
+import kotlinx.android.synthetic.main.activity_comentarios.txtMotivoComentario
+
 
 class ComentariosActivity : AppCompatActivity(), View.OnClickListener {
 
