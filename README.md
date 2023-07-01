@@ -21,8 +21,8 @@ suprindo uma necessidade atual do setor de suporte.
     - É necessário realizar o download do repositorio do projeto através do botão "<> Code" e "Download zip".
     - pode também ser baixado por linha de comando através do seguinte comando: 
       git clone https://github.com/santosdiiih/app-fatec.git
-    - Ao ter o repositorio em sua máquina é necessário abrir o repositorio baixado no android studo.
-    - Deixe o seu emulador ligado para que o Android Studio o reconheça. O nome do Emulador deve ser visivel na segunda linha do android Studio onde ficam algumas ferramentas disponíveis para o uso no desenvolvimento. 
+    - Ao ter o repositorio em sua máquina é necessário abrir o repositorio baixado no android studio.
+    - Deixe o seu emulador ligado para que o Android Studio o reconheça. O nome do Emulador deve ser visivel na segunda linha do Android Studio onde ficam algumas ferramentas disponíveis para o uso no desenvolvimento. 
     - Após o Android Studio baixar todas as dependências do projeto ele irá habilitar o botão "Rum app" que fica ao lado do nome do emulador.
     - Após clicar aguarde o Android Studio instalar o aplicativo em seu emulador, assim que finalizada a instalação o Aplicativo será aberto.
-    - Agora divirta-se implementandp novas funcionalidades....
+    - Agora divirta-se implementando novas funcionalidades....
